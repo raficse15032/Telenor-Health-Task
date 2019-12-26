@@ -21,8 +21,8 @@ class KeyValueController extends Controller
         $data = [];
         $res = array();
 
-        if (isset($_GET['key'])) {
-            $keys = explode(",", $_GET["key"]);
+        if (isset($_GET['keys'])) {
+            $keys = explode(",", $_GET["keys"]);
             DB::table('key_vals')->whereIn('key',$keys)->update(array('updated_at' => $now));
             $data =  KeyVal::whereIn('key',$keys)->get();
         } else {
