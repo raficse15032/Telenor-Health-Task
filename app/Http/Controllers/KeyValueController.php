@@ -81,9 +81,9 @@ class KeyValueController extends Controller
             $id = $old_data[0]->id;
             $key_value = KeyVal::find($id);
             $key_value->key_val = $key_val; 
+            $key_value->ttl = $now; 
             if($key_value->update()){
                 $res = array_merge($res,$key_val);
-                DB::table('key_vals')->where('key',$key)->update(['ttl' => $now]);
             }
             
          }
