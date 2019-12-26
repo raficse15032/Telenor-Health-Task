@@ -36,9 +36,9 @@ class KeyValueController extends Controller
             $res = array_merge($res,$value->key_val);
         }
 
-        if(count($res)>0){
-            return response()->json($res,200);  
-        } 
+        
+        return response()->json($res,200);  
+      
             
     }
 
