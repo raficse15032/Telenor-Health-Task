@@ -15,8 +15,9 @@ class CreateKeyValsTable extends Migration
     {
         Schema::create('key_vals', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('key')->unique();
+            $table->string('key');
             $table->longText('key_val');
+            $table->dateTime('ttl');
             $table->timestamps();
         });
     }
