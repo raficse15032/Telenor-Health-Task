@@ -8,7 +8,8 @@ class KeyVal extends Model
 {
 	public $fillable = [
 		'key',
-        'key_val'
+        'key_val',
+        'ttl'
     ];
     protected $casts = [
         'key_val' => 'array'
