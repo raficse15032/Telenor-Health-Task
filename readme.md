@@ -1,3 +1,7 @@
+#Necessary commands:<br/>
+  php artisan migrate<br/>
+  php artisan serve<br/>
+  php artisan schedule:run<br/><br/>
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
