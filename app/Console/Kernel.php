@@ -34,7 +34,7 @@ class Kernel extends ConsoleKernel
 
         $schedule->call(function () {
             $limit = Carbon::now()->subMinutes(5);
-            DB::table('key_vals')->where('updated_at','<',$limit)->delete();
+            DB::table('key_vals')->where('ttl','<',$limit)->delete();
         })->everyMinute();
     }
 
